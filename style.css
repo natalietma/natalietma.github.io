@@ -316,11 +316,14 @@ footer {
   }
 
   .hero-image {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    object-fit: contain;
-  }
+  width: 100%;
+  height: min(68vw, 760px);
+  min-height: 390px;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 2px;
+}
 
   .section { padding: 58px 0; }
 
