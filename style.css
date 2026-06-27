@@ -6,15 +6,19 @@
   --red: #6e0012;
   --card: #ffffff;
 }
+
 * { box-sizing: border-box; }
 * { font-kerning: normal; text-rendering: optimizeLegibility; }
+
 html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
+
 .nav {
   position: sticky;
   top: 0;
@@ -27,12 +31,14 @@ body {
   padding: 28px 5vw 22px;
   border-bottom: 1px solid var(--line);
 }
+
 .name {
   color: var(--text);
   text-decoration: none;
   font-size: 26px;
   letter-spacing: 0;
 }
+
 .subtitle {
   margin-top: 4px;
   color: var(--muted);
@@ -41,7 +47,14 @@ body {
   letter-spacing: 0.08em;
   font-family: 'Courier New', monospace;
 }
-nav { display: flex; gap: 28px; flex-wrap: wrap; justify-content: flex-end; }
+
+nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 nav a {
   color: var(--text);
   text-decoration: none;
@@ -50,8 +63,11 @@ nav a {
   letter-spacing: 0.06em;
   font-family: 'Courier New', monospace;
 }
+
 main { padding: 0 5vw; }
+
 .hero { padding: 84px 0 60px; }
+
 .manifesto {
   max-width: 620px;
   margin: 0 auto 42px;
@@ -60,6 +76,7 @@ main { padding: 0 5vw; }
   line-height: 1.16;
   letter-spacing: 0;
 }
+
 h1 {
   font-size: clamp(46px, 7vw, 112px);
   line-height: .98;
@@ -68,32 +85,20 @@ h1 {
   margin: 0 0 42px;
   max-width: 1200px;
 }
+
 .hero-image {
   width: 100%;
-  height: min(68vw, 760px);
-  min-height: 390px;
-  background-image: url("assets/hero_lab.jpg");
-  background-size: cover;
-  background-position: center 42%;
+  height: auto;
+  display: block;
+  object-fit: contain;
   border-radius: 2px;
-  position: relative;
-  overflow: hidden;
 }
-.hero-image::after {
-  content: "";
-  position: absolute;
-  left: 32px;
-  bottom: 28px;
-  color: rgba(255,255,255,.84);
-  font-family: 'Courier New', monospace;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-size: 13px;
-}
+
 .section {
   padding: 84px 0;
   border-top: 1px solid var(--line);
 }
+
 .section-title {
   display: flex;
   justify-content: space-between;
@@ -101,6 +106,7 @@ h1 {
   align-items: end;
   margin-bottom: 30px;
 }
+
 h2 {
   font-size: clamp(36px, 5vw, 72px);
   line-height: 1;
@@ -108,23 +114,29 @@ h2 {
   font-weight: 500;
   margin: 0;
 }
-.section-title p, .two-col p, .contact p {
+
+.section-title p,
+.two-col p,
+.contact p {
   color: var(--muted);
   font-size: 20px;
   line-height: 1.35;
   max-width: 650px;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+
 .card {
   background: var(--card);
   border: 1px solid var(--line);
   padding: 34px;
   min-height: 310px;
 }
+
 .tag {
   display: inline-block;
   font-family: 'Courier New', monospace;
@@ -134,6 +146,7 @@ h2 {
   letter-spacing: .05em;
   margin-bottom: 38px;
 }
+
 h3 {
   font-size: 28px;
   line-height: 1.08;
@@ -141,19 +154,23 @@ h3 {
   margin: 0 0 20px;
   font-weight: 500;
 }
+
 .card p {
   color: var(--muted);
   font-size: 17px;
   line-height: 1.42;
 }
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 40px;
 }
+
 .journal-list {
   border-top: 1px solid var(--line);
 }
+
 .journal-list a {
   display: flex;
   justify-content: space-between;
@@ -165,6 +182,7 @@ h3 {
   font-size: 24px;
   letter-spacing: 0.005em;
 }
+
 .journal-list span {
   color: var(--muted);
   font-family: 'Courier New', monospace;
@@ -176,6 +194,7 @@ h3 {
 .timeline {
   border-top: 1px solid var(--line);
 }
+
 .item {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -183,6 +202,7 @@ h3 {
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
 }
+
 .date {
   color: var(--red);
   font-family: 'Courier New', monospace;
@@ -190,15 +210,26 @@ h3 {
   font-size: 13px;
   letter-spacing: .05em;
 }
-.item p, .small-text {
+
+.item p,
+.small-text {
   color: var(--muted);
   font-size: 17px;
   line-height: 1.42;
   margin-top: 0;
 }
-.item h3 a { color: var(--text); text-decoration: none; }
+
+.item h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
 .item h3 a:hover { text-decoration: underline; }
-strong { font-weight: 600; color: var(--text); }
+
+strong {
+  font-weight: 600;
+  color: var(--text);
+}
 
 .contact .links {
   display: flex;
@@ -206,6 +237,7 @@ strong { font-weight: 600; color: var(--text); }
   flex-wrap: wrap;
   margin-top: 28px;
 }
+
 .links a {
   color: var(--text);
   text-decoration: none;
@@ -216,7 +248,12 @@ strong { font-weight: 600; color: var(--text); }
   text-transform: uppercase;
   font-size: 14px;
 }
-.links a:hover { background: var(--text); color: var(--bg); }
+
+.links a:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
 footer {
   padding: 32px 5vw;
   color: var(--muted);
@@ -224,27 +261,45 @@ footer {
   text-transform: uppercase;
   font-size: 13px;
 }
+
+.why-emphasis {
+  color: var(--text) !important;
+}
+
 @media (max-width: 1100px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 850px) {
   main { padding: 0 6vw; }
+
   .nav {
     position: static;
     flex-direction: column;
     gap: 20px;
     padding: 24px 6vw 18px;
   }
+
   .name { font-size: 24px; }
-  .subtitle { font-size: 12px; line-height: 1.35; }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
   nav {
     justify-content: flex-start;
     gap: 10px 16px;
     width: 100%;
   }
-  nav a { font-size: 12px; letter-spacing: 0.055em; }
+
+  nav a {
+    font-size: 12px;
+    letter-spacing: 0.055em;
+  }
+
   .hero { padding: 48px 0 44px; }
+
   .manifesto {
     margin-left: 0;
     max-width: none;
@@ -252,34 +307,87 @@ footer {
     line-height: 1.22;
     margin-bottom: 34px;
   }
+
   h1 {
     font-size: clamp(42px, 11vw, 56px);
     line-height: 0.98;
     letter-spacing: 0.01em;
     margin-bottom: 28px;
   }
+
   .hero-image {
+    width: 100%;
     height: auto;
-    min-height: 430px;
-    background-position: center center;
+    min-height: 0;
+    object-fit: contain;
   }
+
   .section { padding: 58px 0; }
-  .section-title, .two-col { display: block; }
+
+  .section-title,
+  .two-col {
+    display: block;
+  }
+
   .section-title { margin-bottom: 24px; }
-  h2 { font-size: clamp(38px, 12vw, 56px); line-height: 1.04; }
-  .section-title p, .two-col p, .contact p {
+
+  h2 {
+    font-size: clamp(38px, 12vw, 56px);
+    line-height: 1.04;
+  }
+
+  .section-title p,
+  .two-col p,
+  .contact p {
     font-size: 18px;
     line-height: 1.48;
   }
-  .grid { grid-template-columns: 1fr; gap: 20px; }
-  .card { padding: 28px; min-height: auto; }
-  .tag { margin-bottom: 26px; font-size: 12px; }
-  h3 { font-size: 26px; line-height: 1.1; }
-  .card p, .item p, .small-text { font-size: 16.5px; line-height: 1.48; }
-  .item { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
-  .journal-list a { font-size: 19px; flex-direction: column; }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 28px;
+    min-height: auto;
+  }
+
+  .tag {
+    margin-bottom: 26px;
+    font-size: 12px;
+  }
+
+  h3 {
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .card p,
+  .item p,
+  .small-text {
+    font-size: 16.5px;
+    line-height: 1.48;
+  }
+
+  .item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 24px 0;
+  }
+
+  .journal-list a {
+    font-size: 19px;
+    flex-direction: column;
+  }
+
   .contact .links { gap: 10px; }
-  .links a { padding: 12px 17px; font-size: 13px; }
+
+  .links a {
+    padding: 12px 17px;
+    font-size: 13px;
+  }
+
   footer { padding: 28px 6vw; }
 }
 
@@ -290,6 +398,8 @@ footer {
     min-height: 0;
     object-fit: contain;
   }
+
   .card { padding: 24px; }
+
   nav a { font-size: 11.5px; }
 }
